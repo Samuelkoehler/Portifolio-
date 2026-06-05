@@ -1,198 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Samuel Zampronio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Samuel Zampronio</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-body{
-    background:#f8f6f2;
-    color:#111;
-}
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-.menu a {
-    display: inline-block;
-    transition: 0.3s;
-}
-header{
-    padding:20px;
-    border-bottom:1px solid #ddd;
-    background:#f8f6f2;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        section {
+            padding: 80px 0;
+        }
 
-.barra-superior,
-.menu,
-.lista-botoes,
-.lista-habilidades{
-    display:flex;
-}
-
-.barra-superior{
-    max-width:1100px;
-    margin:auto;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.menu,
-.lista-botoes,
-.lista-habilidades{
-    gap:15px;
-}
-.menu a:hover {
-    transform: scale(1.1);
-}
-section{
-    padding:80px 30px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-.inicio{
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-}
-
-h1{
-    font-size:70px;
-    font-weight:normal;
-    margin:20px 0;
-}
-
-h2{
-    font-size:42px;
-    font-weight:normal;
-    margin-bottom:20px;
-}
-
-.texto{
-    max-width:700px;
-    color:#666;
-    line-height:1.7;
-    margin-bottom:20px;
-}
-
-.botao,
-.habilidade{
-    padding:10px 20px;
-    border:1px solid #111;
-    border-radius:30px;
-}
-
-.botao:hover{
-    background:#111;
-    color:#fff;
-}
-
-.habilidade{
-    border-color:#ddd;
-    color:#444;
-}
-.habilidade:hover{
-    background:#111;
-    color:#fff;
-}
-
-footer{
-    text-align:center;
-    padding:25px;
-    border-top:1px solid #ddd;
-    color:#777;
-}
-</style>
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-light">
 
-<header>
-    <div class="barra-superior">
-        <div>Samuel</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Samuel</a>
 
-        <nav class="menu">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </div>
-</header>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<section id="inicio" class="inicio">
-    <div class="container">
-        <p>Portfólio</p>
-        <h1>Samuel Aloizio Koehler Zampronio.</h1>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
 
-        <p class="texto">
-            Este é meu portfólio pessoal, criado com HTML e CSS.
-            A ideia é apresentar minhas informações de forma simples e organizada.
-        </p>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                    </li>
 
-    </div>
-</section>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos">Projetos</a>
+                    </li>
 
-<section id="sobre">
-    <div class="container">
-        <h2>Sobre mim</h2>
-
-        <p class="texto">
-            Gosto muito de praticar esportes e valorizo meus momentos de descanso.
-            Tento levar a vida com leveza e organização.
-        </p>
-    </div>
-</section>
-
-<section id="habilidades">
-    <div class="container">
-        <h2>Habilidades</h2>
-
-        <p class="texto">
-            Tecnologias que estou aprendendo no desenvolvimento web.
-        </p>
-
-        <div class="lista-habilidades">
-            <div class="habilidade">HTML</div>
-            <div class="habilidade">CSS</div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<section id="contato">
-    <div class="container">
-        <h2>Contato</h2>
 
-        <p class="texto">
-            Você pode entrar em contato comigo abaixo.
-        </p>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <p class="text-uppercase text-secondary">Portfólio</p>
 
-        <div class="lista-botoes">
-            <a href="mailto:samuel_zampronio@hotmail.com" class="botao">E-mail</a>
-            <a href="https://www.linkedin.com/in/samuel-aloizio-koehler-zampronio-b697ba269/" class="botao" target="_blank">LinkedIn</a>
+            <h1 class="display-3 mb-4">
+                Samuel Aloizio Koehler Zampronio
+            </h1>
+
+            <p class="lead text-secondary col-lg-8">
+                Este é meu portfólio pessoal desenvolvido com HTML, CSS, Bootstrap e JavaScript.
+                Aqui apresento um pouco sobre mim, minhas habilidades e projetos.
+            </p>
+
+            <a href="#projetos" class="btn btn-primary btn-lg mt-3">
+                Ver Projetos
+            </a>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    © 2026 - Samuel Zampronio
-</footer>
+
+    <section id="sobre" class="bg-white">
+        <div class="container">
+            <h2 class="mb-4">Sobre Mim</h2>
+
+            <p class="text-secondary fs-5">
+                Gosto muito de praticar esportes e valorizo meus momentos de descanso.
+                Busco sempre aprender novas tecnologias e desenvolver projetos que me ajudem
+                a evoluir como estudante e futuro profissional da área de tecnologia.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="habilidades">
+        <div class="container">
+            <h2 class="mb-4">Habilidades</h2>
+
+            <p class="text-secondary mb-4">
+                Tecnologias que estou estudando e utilizando em meus projetos.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-primary fs-6 p-3">HTML</span>
+                <span class="badge bg-info text-dark fs-6 p-3">CSS</span>
+                <span class="badge bg-warning text-dark fs-6 p-3">JavaScript</span>
+                <span class="badge bg-success fs-6 p-3">Bootstrap</span>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="projetos" class="bg-white">
+        <div class="container">
+            <h2 class="mb-5">Projetos</h2>
+
+            <div class="row g-4">
+
+                <!-- Projeto 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Calculadora de Juros Compostos
+                            </h5>
+
+                            <p class="card-text">
+                                Aplicação desenvolvida com HTML, CSS e JavaScript
+                                para realizar cálculos de juros compostos de forma simples.
+                            </p>
+                        </div>
+
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://samuelkoehler.github.io/Calculadora-de-juros-composto/"
+                               target="_blank"
+                               class="btn btn-primary">
+                                Acessar Projeto
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Calculadora de Gerenciamento de Gastos
+                            </h5>
+
+                            <p class="card-text">
+                                Aplicação desenvolvida com HTML, CSS e JavaScript
+                                para auxiliar no controle financeiro pessoal.
+                            </p>
+                        </div>
+
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://samuelkoehler.github.io/Calculadora-de-gerenciamento-de-finan-as/"
+                               target="_blank"
+                               class="btn btn-primary">
+                                Acessar Projeto
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contato">
+        <div class="container">
+            <h2 class="mb-4">Contato</h2>
+
+            <p class="text-secondary mb-4">
+                Você pode entrar em contato comigo através dos canais abaixo.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+
+                <a href="mailto:samuel_zampronio@hotmail.com"
+                   class="btn btn-primary">
+                    E-mail
+                </a>
+
+                <a href="https://www.linkedin.com/in/samuel-aloizio-koehler-zampronio-b697ba269/"
+                   target="_blank"
+                   class="btn btn-primary">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/samuelkoehler"
+                   target="_blank"
+                   class="btn btn-primary">
+                    GitHub
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-dark text-white text-center py-4">
+        © 2026 - Samuel Zampronio
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
